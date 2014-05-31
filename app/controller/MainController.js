@@ -8,6 +8,7 @@ Ext.define('StayOrLeave.controller.MainController', {
     extend: 'Ext.app.Controller',
 
     requires: [
+    	'StayOrLeave.view.MainNavigationView',
     	'StayOrLeave.view.MovieDetailPanel'
     ],
 
@@ -36,8 +37,11 @@ Ext.define('StayOrLeave.controller.MainController', {
     // i'm not sure that this list of method variables is correct (not tested)
     handleMovieListItemTap: function (list, record) {
         console.log('ENTERED MainController::handleMovieListItemTap');
+        var mainNavView = Ext.getCmp('MainNavigationView');
         var movieDetailPanel = Ext.create('StayOrLeave.view.MovieDetailPanel');
-        Ext.Viewport.animateActiveItem(movieDetailPanel, this.slideLeftTransition);
+        mainNavView.push(movieDetailPanel);
+        // old
+        // Ext.Viewport.animateActiveItem(movieDetailPanel, this.slideLeftTransition);
     }
 
 });

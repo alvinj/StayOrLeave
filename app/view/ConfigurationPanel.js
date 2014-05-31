@@ -1,5 +1,6 @@
 Ext.define('StayOrLeave.view.ConfigurationPanel', {
     extend: 'Ext.Panel',
+    alias: 'widget.configurationPanel',
 
     config: {
         xtype: 'configurationPanel',

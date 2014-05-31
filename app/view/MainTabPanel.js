@@ -12,19 +12,6 @@ Ext.define('StayOrLeave.view.MainTabPanel', {
         }
     },
 
-    // items: [
-    //     {
-    //         title: 'Home',
-    //         iconCls: 'home',
-    //         html: 'Home Screen'
-    //     },
-    //     {
-    //         title: 'Contact',
-    //         iconCls: 'user',
-    //         html: 'Contact Screen'
-    //     }
-    // ]
-
     initialize: function() {
         this.callParent(arguments);
         // the main panels that will show up in the bottom toolbar

@@ -43,6 +43,7 @@ Ext.application({
     ],
 
     views: [
+        'MainNavigationView',
         'MainTabPanel',
         'CurrentMoviesPanel',
         'AllMoviesPanel',
@@ -50,14 +51,55 @@ Ext.application({
         'MovieDetailPanel'
     ],
 
+    // // initial; good
+    // launch: function() {
+    //     var mainTabPanel = Ext.create('StayOrLeave.view.MainTabPanel');
+    //     Ext.Viewport.add([
+    //         mainTabPanel
+    //     ]);
+    // }
+
     launch: function() {
-        var mainTabPanel = Ext.create('StayOrLeave.view.MainTabPanel');
+        var mainNavigationView = Ext.create('StayOrLeave.view.MainNavigationView');
         Ext.Viewport.add([
-            mainTabPanel
+            mainNavigationView
         ]);
+    },
+
+    init: function() {
+        // create these for the tab panel
+        Ext.create('StayOrLeave.view.CurrentMoviesPanel');
+        Ext.create('StayOrLeave.view.AllMoviesPanel');
+        Ext.create('StayOrLeave.view.ConfigurationPanel');
     }
 
+    // launch: function() {
+    //     var mainTabPanel = Ext.create('StayOrLeave.view.MainTabPanel');
+    //     var view = Ext.create('Ext.NavigationView', {
+    //         fullscreen: true,
+    //         items: [{
+    //             title: 'Stay or Leave',
+    //             items: [
+    //                 mainTabPanel
+    //             ]
+    //         }]
+    //     });
+    // }
+
+
+
+
 });
+
+
+
+
+
+
+
+
+
+
 
 
 
