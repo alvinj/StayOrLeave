@@ -9,7 +9,8 @@ Ext.define('StayOrLeave.controller.MainController', {
 
     requires: [
     	'StayOrLeave.view.MainNavigationView',
-    	'StayOrLeave.view.MovieDetailPanel'
+    	'StayOrLeave.view.MovieDetailForm',
+    	'StayOrLeave.view.MovieDetailView'
     ],
 
     config: {
@@ -26,7 +27,7 @@ Ext.define('StayOrLeave.controller.MainController', {
         },
 
 	    views: [
-	    	'MovieDetailPanel'
+	    	'MovieDetailForm'
 	    ],
     },
 
@@ -34,15 +35,21 @@ Ext.define('StayOrLeave.controller.MainController', {
     slideLeftTransition: { type: 'slide', direction: 'left' },
     slideRightTransition: { type: 'slide', direction: 'right' },
 
-    // i'm not sure that this list of method variables is correct (not tested)
     handleMovieListItemTap: function (list, record) {
-        console.log('ENTERED MainController::handleMovieListItemTap');
+        // console.log('ENTERED MainController::handleMovieListItemTap');
+        // TODO a better way to do this?
         var mainNavView = Ext.getCmp('MainNavigationView');
-        var movieDetailPanel = Ext.create('StayOrLeave.view.MovieDetailPanel');
-        mainNavView.push(movieDetailPanel);
-        // old
-        // Ext.Viewport.animateActiveItem(movieDetailPanel, this.slideLeftTransition);
+        var movieDetailView = Ext.create('StayOrLeave.view.MovieDetailView');
+        mainNavView.push(movieDetailView);
     }
+
+    // // i'm not sure that this list of method variables is correct (not tested)
+    // handleMovieListItemTap: function (list, record) {
+    //     console.log('ENTERED MainController::handleMovieListItemTap');
+    //     var mainNavView = Ext.getCmp('MainNavigationView');
+    //     var movieDetailPanel = Ext.create('StayOrLeave.view.MovieDetailPanel');
+    //     mainNavView.push(movieDetailPanel);
+    // }
 
 });
 

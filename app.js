@@ -48,7 +48,7 @@ Ext.application({
         'CurrentMoviesPanel',
         'AllMoviesPanel',
         'ConfigurationPanel',
-        'MovieDetailPanel'
+        'MovieDetailForm'
     ],
 
     // // initial; good

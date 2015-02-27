@@ -45,12 +45,12 @@ Ext.define('StayOrLeave.view.CurrentMoviesPanel', {
     },
 
     onMovieListItemTap: function (theList, index, target, record, e, eOpts) {
-        console.log('CurrentMoviesPanel::onMovieListItemTap called');
+        // console.log('CurrentMoviesPanel::onMovieListItemTap called');
         this.fireEvent('MovieListItemTap', this);
     },
 
     initialize: function () {
-        console.log('ENTERED CurrentMoviesPanel::initialize');
+        // console.log('ENTERED CurrentMoviesPanel::initialize');
     }
 
 });
